@@ -1,10 +1,13 @@
-import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import postcss from "rollup-plugin-postcss";
+import resolve from "@rollup/plugin-node-resolve";
 import dts from "rollup-plugin-dts";
-
-const packageJson = require("./package.json");
+// import { fileURLToPath } from 'url';
+// const __filename = fileURLToPath(import.meta.url);
+// global['__filename'] = __filename;
+// const packageJson = require("./package.json");
+import packageJson from "./package.json" assert { type: "json" };
 
 export default [
   {
@@ -24,7 +27,11 @@ export default [
     plugins: [
       resolve(),
       commonjs(),
-      typescript({ tsconfig: "./tsconfig.json" }),
+      typescript({
+        tsconfig: "./tsconfig.json",
+        declaration: true,
+        declarationDir: 'dist',
+      }),
       postcss(),
     ],
   },
