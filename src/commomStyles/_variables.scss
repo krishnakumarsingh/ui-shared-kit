@@ -1,0 +1,77 @@
+@import './color';
+
+$base-font-family: 'Source Sans Pro', sans-serif;
+$secondary-font-family: 'Roboto', sans-serif;
+
+$button-secondary-default: linear-gradient(
+    180deg,
+    #fbfbfb 0%,
+    #f5f5f9 100%
+); //background color secondary button
+$button-secondary-inactive: linear-gradient(
+    180deg,
+    #f5f5f9 0%,
+    #f5f5f9 100%
+); // disabled background color secondary button
+$button-primary-inactive: rgba(
+    46,
+    180,
+    239,
+    0.65
+); // disabled primary button background color
+$button-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+$card-box-shadow:
+    0 0 5px 0 rgb(43 43 43 / 10%),
+    0 11px 6px -6px rgb(43 43 43 / 5%),
+    0 0 3px 0 rgb(140 140 140 / 10%);
+$card-padding: 20px;
+
+$color_1: var(--actiondisabled);
+$color_2: var(--inherittextprimarymain);
+$color_3: var(--inheritwhitemain);
+$color_4: var(--warningcontrast);
+$color_5: var(--errorcontrast);
+$color_6: var(--secondarymain);
+$color_7: var(--primarycontrast);
+$color_8: var(--infomain);
+$color_9: var(--primarymain);
+$color_10: var(--successmain);
+$color_11: var(--successcontrast);
+$color_12: var(--errormain);
+$color_13: var(--secondarycontrast);
+$color_14: var(--infocontrast);
+$color_15: var(--warningmain);
+$font-family_1: var(--components-button-large-font-family);
+$font-family_2: var(--components-button-medium-font-family);
+$font-family_3: var(--components-button-small-font-family);
+$background-color_1: var(--actiondisabledbackground);
+$background-color_2: var(--warningdark);
+$background-color_3: var(--errordark);
+$background-color_4: #e0e0e0;
+$background-color_5: var(--primarymain);
+$background-color_6: var(--infostateshover);
+$background-color_7: var(--successstateshover);
+$background-color_8: var(--successdark);
+$background-color_9: #f5f5f5;
+$background-color_10: var(--primarystateshover);
+$background-color_11: var(--warningmain);
+$background-color_12: var(--secondarymain);
+$background-color_13: var(--infodark);
+$background-color_14: var(--successmain);
+$background-color_15: var(--warningstateshovered);
+$background-color_16: var(--secondarydark);
+$background-color_17: var(--primarydark);
+$background-color_18: var(--actionhover);
+$background-color_19: var(--infomain);
+$background-color_20: var(--errorstateshover);
+$background-color_21: var(--errormain);
+$background-color_22: var(--secondarystateshover);
+$border-color_1: var(--actiondisabledbackground);
+$border-color_2: var(--secondarystatesoutlinedborder);
+$border-color_3: var(--successstatesoutlinedborder);
+$border-color_4: var(--infostatesoutlinedborder);
+$border-color_5: var(--errorstatesoutlinedborder);
+$border-color_6: var(--primarystatesoutlinedborder);
+$border-color_7: var(--inheritwhitemain);
+$border-color_8: var(--warningstatesoutlinedborder);
+$border-color_9: var(--inherittextprimarymain);

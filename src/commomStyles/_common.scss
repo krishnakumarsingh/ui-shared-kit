@@ -1,0 +1,212 @@
+@import './styleguide';
+@import './fonts';
+@import './variables';
+
+* {
+    box-sizing: border-box;
+}
+
+@mixin AllSidePadding($size) {
+    padding: #{$size * 1px};
+}
+
+@mixin FourSidePadding($top, $right, $bottom, $left) {
+    padding: #{$top * 1px $right * 1px $bottom * 1px $left * 1px};
+}
+
+@mixin TwoSidePadding($topBottom, $leftRight) {
+    padding: #{$topBottom * 1px $leftRight * 1px};
+}
+
+@mixin AllSideMargin($top, $right, $bottom, $left) {
+    margin: #{$top * 1px $right * 1px $bottom * 1px $left * 1px};
+}
+
+@for $i from 0 through 10 {
+    $unit: $i * 5;
+
+    .padding-#{$unit} {
+        padding: $unit * 1px;
+    }
+
+    .padding-top-#{$unit} {
+        padding-top: $unit * 1px;
+    }
+
+    .padding-right-#{$unit} {
+        padding-right: $unit * 1px;
+    }
+
+    .padding-bottom-#{$unit} {
+        padding-bottom: $unit * 1px;
+    }
+
+    .padding-left-#{$unit} {
+        padding-left: $unit * 1px;
+    }
+
+    .margin-#{$unit} {
+        margin: $unit * 1px;
+    }
+
+    .margin-top-#{$unit} {
+        margin-top: $unit * 1px;
+    }
+
+    .margin-right-#{$unit} {
+        margin-right: $unit * 1px;
+    }
+
+    .margin-bottom-#{$unit} {
+        margin-bottom: $unit * 1px;
+    }
+
+    .margin-left-#{$unit} {
+        margin-left: $unit * 1px;
+    }
+}
+
+@mixin ModalHeadings() {
+    font-family: $base-font-family;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+@mixin BorderLiteGrey($variant, $size) {
+    border#{-$variant}: #{$size * 1px} solid $lite-grey-border-color;
+}
+
+@for $i from 1 through 5 {
+    $unit: $i;
+
+    .border-bottom-grey-#{$unit} {
+        @include BorderLiteGrey(bottom, $unit);
+    }
+
+    .border-top-grey-#{$unit} {
+        @include BorderLiteGrey(top, $unit);
+    }
+
+    .border-left-grey-#{$unit} {
+        @include BorderLiteGrey(left, $unit);
+    }
+
+    .border-right-grey-#{$unit} {
+        @include BorderLiteGrey(right, $unit);
+    }
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-items-center {
+    justify-items: center;
+}
+
+.justify-content-end {
+    justify-content: flex-end;
+}
+
+.justify-content-start {
+    justify-content: flex-start;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.notEqualIcon {
+    display: block;
+    position: relative;
+    &:before {
+        position: absolute;
+        content: '';
+        left: 3px;
+        top: 5px;
+        height: 55%;
+        width: 0;
+        rotate: 30deg;
+        border-right: 1px #113248 solid;
+    }
+}
+
+.InputInfoText {
+    color: $help-text-color;
+    font-family: $secondary-font-family;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.d-block {
+    display: block;
+}
+
+.labelRadio {
+    .MuiFormControlLabel-label {
+        font-size: 14px;
+        color: $text-color-black;
+        font-family: $base-font-family;
+        font-weight: 400;
+    }
+}
+
+@mixin cardCommonStyles {
+    box-shadow: $card-box-shadow;
+    padding: $card-padding;
+}
+
+.status-led {
+    margin: 0px 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    box-shadow:
+        0 0 0 2px #acacac,
+        0 0 0 4px #ffffff,
+        0 0 0 5px #d5d5d5;
+}
+
+.status-led.status-good {
+    background-color: #b1ffcc;
+    box-shadow:
+        0 0 0 2px #00c335,
+        0 0 0 4px #ffffff,
+        0 0 0 5px #d5d5d5;
+}
+
+.status-led.status-warning {
+    background-color: #ffd794;
+    box-shadow:
+        0 0 0 2px #fb9d03,
+        0 0 0 4px #ffffff,
+        0 0 0 5px #d5d5d5;
+}
+
+.status-led.status-error {
+    background-color: #ffb1b1;
+    box-shadow:
+        0 0 0 2px #fb0303,
+        0 0 0 4px #ffffff,
+        0 0 0 5px #d5d5d5;
+}
+
+.tabBodyContainer {
+    max-height: 400px;
+    overflow-y: scroll;
+    background: #fff;
+    @include TwoSidePadding(30, 50);
+
+    .MuiTabPanel-root {
+        padding: 0;
+    }
+}
+.tab-background {
+    background: $tab-background-color;
+}
