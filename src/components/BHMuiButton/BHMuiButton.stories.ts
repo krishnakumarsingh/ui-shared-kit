@@ -1,16 +1,16 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { fireEvent, userEvent, within } from '@storybook/testing-library'
-import Button from './index'
+import BHMuiButton from './index'
 
-const meta: Meta<typeof Button> = {
+const meta: Meta<typeof BHMuiButton> = {
     title: 'Atom / Button',
-    component: Button,
+    component: BHMuiButton,
     parameters: {
         // layout: 'centered',
         docs: {
             description: {
                 component:
-                    'Showing a simple buttom with default properties `large`, `` ',
+                    'Showing a simple buttom with default properties `large`, `primary`, `enabled`, `contained`.',
             },
         },
     },
@@ -78,6 +78,8 @@ const meta: Meta<typeof Button> = {
         await fireEvent.click(canvas.getByRole('button'))
     },
 }
+export default meta
+type Story = StoryObj<typeof meta>
 
 export const Contained = {
     args: {
@@ -87,9 +89,48 @@ export const Contained = {
         stateProp: 'enabled',
         variant: 'contained',
     },
+    parameters: {
+        docs: {
+            description: {
+                story: 'Showing a simple buttom with default properties `contained`.',
+            },
+        },
+    },
 }
-export default meta
-type Story = StoryObj<typeof meta>
+
+export const Outlined = {
+    args: {
+        label: 'Label',
+        size: 'large',
+        color: 'primary',
+        stateProp: 'enabled',
+        variant: 'outlined',
+    },
+    parameters: {
+        docs: {
+            description: {
+                story: 'Showing a simple buttom with default properties `outlined`.',
+            },
+        },
+    },
+}
+
+export const Text = {
+    args: {
+        label: 'Label',
+        size: 'large',
+        color: 'primary',
+        stateProp: 'enabled',
+        variant: 'text',
+    },
+    parameters: {
+        docs: {
+            description: {
+                story: 'Showing a simple buttom with default properties `outlined`.',
+            },
+        },
+    },
+}
 
 // export const Primary: Story = {
 //     args: {

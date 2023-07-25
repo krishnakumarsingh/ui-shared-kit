@@ -7,20 +7,19 @@ import theme from './theme'
 import { ProgressCircular } from '../ProgressCircular'
 import { Props } from './InfcButton'
 import './style.scss'
-
-declare module '@mui/material/Typography' {
-    interface ButtonPropsColorOverrides {
+declare module '@mui/material/Button' {
+    interface ButtonPropsVariantOverrides {
         inheritText: true
         inheritWhite: true
     }
 }
 
-const StyledButton = styled(Button)(({ theme }) => ({
-    backgroundColor: '', //theme?.vars?.palette?.primary?.main,
-    color: theme?.vars?.palette?.primary?.contrastText,
+const StyledButton = styled(Button)(({ theme, ...props }) => ({
+    backgroundColor: '', //(props: Props) => (props?.variant === "outlined" ? "red": ""), //theme?.vars?.palette?.primary?.main,
+    color: '', //(props: Props) => (props?.variant === "outlined" ? "blue": ""),//theme?.vars?.palette?.primary?.contrastText,
 }))
 
-const CustomButton = ({
+const BHMuiButton = ({
     loadingEnd,
     loadingStart = true,
     label = 'label',
@@ -32,14 +31,12 @@ const CustomButton = ({
     variant = 'outlined',
     className = '',
 }: Props): JSX.Element => {
-    console.log(size)
     const [state, dispatch] = useReducer(reducer, {
         size: size || 'large',
         color: color || 'primary',
         state: stateProp || 'enabled',
         variant: variant || 'contained',
     })
-    console.log(size)
     return (
         <ThemeProvider theme={theme}>
             <StyledButton
@@ -54,7 +51,7 @@ const CustomButton = ({
                     dispatch('mouse_enter')
                 }}
             >
-                {stateProp === 'focused' && (
+                {/* {stateProp === 'focused' && (
                     <img
                         className="focus-ripple"
                         alt="Focus ripple"
@@ -346,7 +343,7 @@ const CustomButton = ({
                                 : '/img/focusripple-142.svg'
                         }
                     />
-                )}
+                )} */}
 
                 <div className="base">
                     {stateProp === 'loading' && (
@@ -446,4 +443,4 @@ Button.propTypes = {
     variant: PropTypes.oneOf(['text', 'outlined', 'contained']),
 }
 
-export default CustomButton
+export default BHMuiButton

@@ -1,7 +1,7 @@
 import { ProgressCircular } from '.'
 
 export default {
-    title: 'Components/ProgressCircular',
+    title: 'Atom / ProgressCircular',
     component: ProgressCircular,
     argTypes: {
         color: {
