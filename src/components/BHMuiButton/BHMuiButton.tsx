@@ -8,15 +8,15 @@ import { ProgressCircular } from '../ProgressCircular'
 import { Props } from './InfcButton'
 import './style.scss'
 declare module '@mui/material/Button' {
-    interface ButtonPropsVariantOverrides {
+    interface ButtonPropsColorOverrides {
         inheritText: true
         inheritWhite: true
     }
 }
 
 const StyledButton = styled(Button)(({ theme, ...props }) => ({
-    backgroundColor: '', //(props: Props) => (props?.variant === "outlined" ? "red": ""), //theme?.vars?.palette?.primary?.main,
-    color: '', //(props: Props) => (props?.variant === "outlined" ? "blue": ""),//theme?.vars?.palette?.primary?.contrastText,
+    backgroundColor: theme?.vars?.palette?.primary?.main,
+    color: theme?.vars?.palette?.primary?.contrastText,
 }))
 
 const BHMuiButton = ({
@@ -349,7 +349,7 @@ const BHMuiButton = ({
                     {stateProp === 'loading' && (
                         <>
                             <>
-                                {loadingStart && (
+                                {/* {loadingStart && (
                                     <ProgressCircular
                                         className="progress-circular-instance"
                                         color="primary"
@@ -387,7 +387,7 @@ const BHMuiButton = ({
                                         }`}
                                         size="sixteen-px"
                                     />
-                                )}
+                                )} */}
                             </>
                         </>
                     )}
@@ -417,7 +417,7 @@ function reducer(state: any, action: any) {
     return state
 }
 
-Button.propTypes = {
+BHMuiButton.propTypes = {
     loadingEnd: PropTypes.bool,
     loadingStart: PropTypes.bool,
     label: PropTypes.string,
@@ -425,13 +425,14 @@ Button.propTypes = {
     endIcon: PropTypes.bool,
     size: PropTypes.oneOf(['large', 'medium', 'small']),
     color: PropTypes.oneOf([
-        'inherit',
         'warning',
         'info',
         'success',
         'secondary',
         'primary',
         'error',
+        'inheritText',
+        'inheritWhite'
     ]),
     stateProp: PropTypes.oneOf([
         'enabled',
