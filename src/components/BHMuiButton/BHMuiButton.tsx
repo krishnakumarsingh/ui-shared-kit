@@ -31,12 +31,12 @@ const BHMuiButton = ({
     variant = 'outlined',
     className = '',
 }: Props): JSX.Element => {
-    const [state, dispatch] = useReducer(reducer, {
+    /*const [state, dispatch] = useReducer(reducer, {
         size: size || 'large',
         color: color || 'primary',
         state: stateProp || 'enabled',
         variant: variant || 'contained',
-    })
+    })*/
     return (
         <ThemeProvider theme={theme}>
             <StyledButton
@@ -45,10 +45,10 @@ const BHMuiButton = ({
                 color={color}
                 size={size}
                 onMouseLeave={() => {
-                    dispatch('mouse_leave')
+                    console.log('mouse_leave')
                 }}
                 onMouseEnter={() => {
-                    dispatch('mouse_enter')
+                  console.log('mouse_enter')
                 }}
             >
                 <div className="base">

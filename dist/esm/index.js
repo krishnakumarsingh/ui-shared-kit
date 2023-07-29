@@ -30,17 +30,6 @@ PERFORMANCE OF THIS SOFTWARE.
 /* global Reflect, Promise, SuppressedError, Symbol */
 
 
-var __assign = function() {
-    __assign = Object.assign || function __assign(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-
 function __rest(s, e) {
     var t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
@@ -13102,30 +13091,21 @@ var StyledButton = styled$1(Button$1)(function (_a) {
 });
 var BHMuiButton = function (_a) {
     _a.loadingEnd; _a.loadingStart; var _c = _a.label, label = _c === void 0 ? 'label' : _c; _a.startIcon; _a.endIcon; var _d = _a.size, size = _d === void 0 ? 'large' : _d, _e = _a.color, color = _e === void 0 ? 'primary' : _e, _f = _a.stateProp, stateProp = _f === void 0 ? 'enabled' : _f, _g = _a.variant, variant = _g === void 0 ? 'outlined' : _g, _h = _a.className, className = _h === void 0 ? '' : _h;
-    var _j = reactExports.useReducer(reducer, {
+    /*const [state, dispatch] = useReducer(reducer, {
         size: size || 'large',
         color: color || 'primary',
         state: stateProp || 'enabled',
         variant: variant || 'contained',
-    }); _j[0]; var dispatch = _j[1];
+    })*/
     return (React.createElement(ThemeProvider, { theme: theme },
         React.createElement(StyledButton, { className: "button ".concat(stateProp, " btn-override-").concat(color, " variant-").concat(variant, " size-").concat(size, " ").concat(className), variant: variant, color: color, size: size, onMouseLeave: function () {
-                dispatch('mouse_leave');
+                console.log('mouse_leave');
             }, onMouseEnter: function () {
-                dispatch('mouse_enter');
+                console.log('mouse_enter');
             } },
             React.createElement("div", { className: "base" },
                 React.createElement("div", { className: "text-wrapper" }, label)))));
 };
-function reducer(state, action) {
-    switch (action) {
-        case 'mouse_enter':
-            return __assign(__assign({}, state), { state: 'hovered' });
-        case 'mouse_leave':
-            return __assign(__assign({}, state), { state: 'enabled' });
-    }
-    return state;
-}
 
 export { BHMuiButton };
 //# sourceMappingURL=index.js.map
