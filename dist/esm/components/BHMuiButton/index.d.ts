@@ -1,1 +1,1 @@
-export { default } from './BHMuiButton'
+export { default } from './BHMuiButton';

@@ -1,5 +1,14 @@
-import { createTheme } from '@mui/material/styles'
-
+import { createTheme, PaletteOptions } from '@mui/material/styles'
+declare module '@mui/material/styles/createPalette' {
+    export interface PaletteOptions {
+        inheritText?: PaletteColorOptions
+        inheritWhite?: PaletteColorOptions
+    }
+    export interface Palette {
+        inheritText: SimplePaletteColorOptions & ColorPartial
+        inheritWhite: SimplePaletteColorOptions & ColorPartial
+    }
+  }
 const theme = createTheme({
     palette: {
         primary: {

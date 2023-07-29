@@ -1,1 +1,1 @@
-export { default as BHMuiButton } from '../components/BHMuiButton'
+export { default as BHMuiButton } from '../components/BHMuiButton';
