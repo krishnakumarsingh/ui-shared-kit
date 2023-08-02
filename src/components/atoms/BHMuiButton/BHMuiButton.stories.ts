@@ -42,8 +42,8 @@ const meta: Meta<typeof BHMuiButton> = {
                 'warning',
                 'info',
                 'success',
-                'inheritText',
-                'inheritWhite',
+                // 'inheritText',
+                // 'inheritWhite',
             ],
             control: { type: 'select' },
             description:

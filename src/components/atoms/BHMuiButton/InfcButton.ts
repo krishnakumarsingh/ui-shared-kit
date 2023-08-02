@@ -12,14 +12,13 @@ export interface Props {
         | 'secondary'
         | 'primary'
         | 'error'
-        | 'inheritText'
-        | 'inheritWhite'
+        // | 'inheritText'
+        // | 'inheritWhite'
         | 'inherit'
     stateProp?: 'enabled' | 'focused' | 'hovered' | 'loading' | 'disabled'
     variant?: 'text' | 'outlined' | 'contained'
     className?: string
 }
-
 
 // BHMuiButton.propTypes = {
 //     loadingEnd: PropTypes.bool,
