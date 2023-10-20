@@ -1,6 +1,12 @@
 /// <reference types="react" />
 import { Props } from './InfcButton'
 import './style.scss'
+declare module '@mui/material/Button' {
+    interface ButtonPropsColorOverrides {
+        inheritText: true
+        inheritWhite: true
+    }
+}
 declare const BHMuiButton: ({
     loadingEnd,
     loadingStart,

@@ -1,14 +1,14 @@
 import { createTheme, PaletteOptions } from '@mui/material/styles'
-// declare module '@mui/material/styles/createPalette' {
-//     export interface PaletteOptions {
-//         inheritText?: PaletteColorOptions
-//         inheritWhite?: PaletteColorOptions
-//     }
-//     export interface Palette {
-//         inheritText: SimplePaletteColorOptions & ColorPartial
-//         inheritWhite: SimplePaletteColorOptions & ColorPartial
-//     }
-//   }
+declare module '@mui/material/styles/createPalette' {
+    export interface PaletteOptions {
+        inheritText?: PaletteColorOptions
+        inheritWhite?: PaletteColorOptions
+    }
+    export interface Palette {
+        inheritText: SimplePaletteColorOptions & ColorPartial
+        inheritWhite: SimplePaletteColorOptions & ColorPartial
+    }
+}
 const theme = createTheme({
     palette: {
         primary: {
@@ -47,18 +47,18 @@ const theme = createTheme({
             dark: '#5C8118',
             contrastText: '#FFF',
         },
-        // inheritText: {
-        //     light: '#E0E0E0',
-        //     main: '#E0E0E0',
-        //     dark: '#E0E0E0',
-        //     contrastText: '#1E2124',
-        // },
-        // inheritWhite: {
-        //     light: '#E0E0E0',
-        //     main: '#E0E0E0',
-        //     dark: '#E0E0E0',
-        //     contrastText: '#FFF',
-        // },
+        inheritText: {
+            light: '#E0E0E0',
+            main: '#E0E0E0',
+            dark: '#E0E0E0',
+            contrastText: '#1E2124',
+        },
+        inheritWhite: {
+            light: '#E0E0E0',
+            main: '#E0E0E0',
+            dark: '#E0E0E0',
+            contrastText: '#FFF',
+        },
     },
 })
 export default theme

@@ -7,12 +7,12 @@ import theme from './theme'
 // import { ProgressCircular } from '../ProgressCircular'
 import { Props } from './InfcButton'
 import './style.scss'
-// declare module '@mui/material/Button' {
-//     interface ButtonPropsColorOverrides {
-//         inheritText: true
-//         inheritWhite: true
-//     }
-// }
+declare module '@mui/material/Button' {
+    interface ButtonPropsColorOverrides {
+        inheritText: true
+        inheritWhite: true
+    }
+}
 
 const StyledButton = styled(Button)(({ theme, ...props }) => ({
     backgroundColor: theme?.vars?.palette?.primary?.main,
@@ -38,24 +38,24 @@ const BHMuiButton = ({
         variant: variant || 'contained',
     })*/
     return (
-        // <ThemeProvider theme={theme}>
-        <Button
-            className={`button ${stateProp} btn-override-${color} variant-${variant} size-${size} ${className}`}
-            variant={variant}
-            color={color}
-            size={size}
-            onMouseLeave={() => {
-                console.log('mouse_leave')
-            }}
-            onMouseEnter={() => {
-                console.log('mouse_enter')
-            }}
-        >
-            <div className="base">
-                <div className="text-wrapper">{label}</div>
-            </div>
-        </Button>
-        // </ThemeProvider>
+        <ThemeProvider theme={theme}>
+            <StyledButton
+                className={`button ${stateProp} btn-override-${color} variant-${variant} size-${size} ${className}`}
+                variant={variant}
+                color={color}
+                size={size}
+                onMouseLeave={() => {
+                    console.log('mouse_leave')
+                }}
+                onMouseEnter={() => {
+                    console.log('mouse_enter')
+                }}
+            >
+                <div className="base">
+                    <div className="text-wrapper">{label}</div>
+                </div>
+            </StyledButton>
+        </ThemeProvider>
     )
 }
 

@@ -19,6 +19,12 @@ interface Props {
     className?: string
 }
 
+declare module '@mui/material/Button' {
+    interface ButtonPropsColorOverrides {
+        inheritText: true
+        inheritWhite: true
+    }
+}
 declare const BHMuiButton: ({
     loadingEnd,
     loadingStart,
