@@ -1,0 +1,11 @@
+@mixin fontSourceSans3($name, $weight, $style) {
+  @font-face {
+    font-family: 'Source Sans 3';
+    src: url('../assets/fonts/Source_Sans_3/#{$name}.ttf') format("truetype");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@include fontSourceSans3('SourceSans3-Regular', 400, normal);
+@include fontSourceSans3('SourceSans3-Regular', 500, normal);

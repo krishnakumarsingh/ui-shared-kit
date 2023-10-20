@@ -1,0 +1,12 @@
+{
+  "extends": ["plugin:storybook/recommended"],
+  "parserOptions": {
+		"ecmaVersion": "latest",
+		"ecmaFeatures": {
+			"jsx": true,
+      "tsx": true,
+      "ts": true
+		},
+		"sourceType": "module"
+	}
+}

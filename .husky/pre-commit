@@ -1,4 +1,9 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npx lint-staged
+# npm test
+npx prettier --write **/*.js **/*.ts **/*.tsx
+# npm uninstall react react-dom
+# npm run rollup
+# npm instal react reat-dom
+# git add -A .

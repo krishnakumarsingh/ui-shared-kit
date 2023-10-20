@@ -3,10 +3,7 @@ import typescript from '@rollup/plugin-typescript'
 import postcss from 'rollup-plugin-postcss'
 import resolve from '@rollup/plugin-node-resolve'
 import dts from 'rollup-plugin-dts'
-// import { fileURLToPath } from 'url';
-// const __filename = fileURLToPath(import.meta.url);
-// global['__filename'] = __filename;
-// const packageJson = require("./package.json");
+import copy from "rollup-plugin-copy";
 import packageJson from './package.json' assert { type: 'json' }
 
 export default [
@@ -32,7 +29,14 @@ export default [
                 declaration: true,
                 declarationDir: 'dist',
             }),
-            postcss(),
+            copy({
+                targets: [
+                    { src: "src/assets", dest: "dist" },
+                ],
+            }),
+            postcss({
+                extract: true,
+            }),
         ],
     },
     {

@@ -1,1 +1,0 @@
-export { ProgressCircular } from './ProgressCircular'

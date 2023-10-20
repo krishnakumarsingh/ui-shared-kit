@@ -1,0 +1,236 @@
+{
+	"color": {
+		"text": {
+			"primary": {
+				"value": "#1E2124"
+			},
+			"secondary": {
+				"value": "#57616B"
+			},
+			"disabled": {
+				"value": "#6A7581"
+			}
+		},
+		"primary": {
+			"main": {
+				"value": "#FFC107"
+			},
+			"dark": {
+				"value": "#B28704"
+			},
+			"light": {
+				"value": "#FFCD38"
+			},
+			"contrast": {
+				"value": "#000000DE"
+			},
+			"hover": {
+				"value": "#0049900A"
+			},
+			"selected": {
+				"value": "#00499014"
+			},
+			"focus": {
+				"value": "#0049901F"
+			},
+			"focusVisible": {
+				"value": "#0049904D"
+			},
+			"outlinedBorder": {
+				"value": "#00499080"
+			}
+		},
+		"secondary": {
+			"main": {
+				"value": "#3C4249"
+			},
+			"dark": {
+				"value": "#2A2E33"
+			},
+			"light": {
+				"value": "#63676D"
+			},
+			"contrast": {
+				"value": "#FFFFFF"
+			},
+			"hover": {
+				"value": "#3C42490A"
+			},
+			"selected": {
+				"value": "#1E212414"
+			},
+			"focus": {
+				"value": "#3C42491F"
+			},
+			"focusVisible": {
+				"value": "#3C42494D"
+			},
+			"outlinedBorder": {
+				"value": "#3C424980"
+			}
+		},
+		"action": {
+			"active": {
+				"value": "#1E21248F"
+			},
+			"hover": {
+				"value": "#1E21240A"
+			},
+			"selected": {
+				"value": "#1E212414"
+			},
+			"focus": {
+				"value": "#1E21241F"
+			},
+			"disabled": {
+				"value": "#1E212461"
+			}
+		},
+		"divider": {
+			"value": "#1E21241F"
+		},
+		"error": {
+			"main": {
+				"value": "#B7000E"
+			},
+			"dark": {
+				"value": "#800009"
+			},
+			"light": {
+				"value": "#C5333E"
+			},
+			"contrast": {
+				"value": "#FFFFFF"
+			}
+		},
+		"warning": {
+			"main": {
+				"value": "#FFC107"
+			},
+			"dark": {
+				"value": "#B28704"
+			},
+			"light": {
+				"value": "#FFCD38"
+			},
+			"contrast": {
+				"value": "#000000DE"
+			}
+		},
+		"info": {
+			"main": {
+				"value": "#007CBE"
+			},
+			"dark": {
+				"value": "#005685"
+			},
+			"light": {
+				"value": "#3396CB"
+			},
+			"contrast": {
+				"value": "#FFFFFF"
+			}
+		},
+		"success": {
+			"main": {
+				"value": "#6E9A1C"
+			},
+			"dark": {
+				"value": "#405A10"
+			},
+			"light": {
+				"value": "#7C9A46"
+			},
+			"contrast": {
+				"value": "#FFFFFF"
+			}
+		},
+		"inheritText": {
+			"main": {
+				"value": "#E3E7ED"
+			},
+			"dark": {
+				"value": "#F3F7FC"
+			},
+			"light": {
+				"value": "#E3E7ED"
+			},
+			"contrast": {
+				"value": "#1E2124"
+			}
+		},
+		"inheritWhite": {
+			"main": {
+				"value": "#F3F7FC"
+			},
+			"dark": {
+				"value": "#E0E0E0"
+			},
+			"light": {
+				"value": "#E0E0E0"
+			},
+			"contrast": {
+				"value": "#FFFFFF"
+			}
+		},
+		"common": {
+			"black": {
+				"main": {
+					"value": "#"
+				},
+				"hover": {
+					"value": "#"
+				},
+				"selected": {
+					"value": "#"
+				},
+				"focus": {
+					"value": "#"
+				},
+				"focusVisible": {
+					"value": "#"
+				},
+				"outlinedBorder": {
+					"value": "#"
+				}
+			},
+			"white": {
+				"main": {
+					"value": "#"
+				},
+				"hover": {
+					"value": "#"
+				},
+				"selected": {
+					"value": "#"
+				},
+				"focus": {
+					"value": "#"
+				},
+				"focusVisible": {
+					"value": "#"
+				},
+				"outlinedBorder": {
+					"value": "#"
+				}
+			}
+		},
+		"background": {
+			"default": {
+				"value": "#FFFFFF"
+			},
+			"paper-elevation-0": {
+				"value": "#FFFFFF"
+			},
+			"paper-elevation-2": {
+				"value": "#FFFFFF"
+			},
+			"paper-elevation-16": {
+				"value": "#FFFFFF"
+			},
+			"paper-elevation-24": {
+				"value": "#FFFFFF"
+			}
+		}
+	}
+}
